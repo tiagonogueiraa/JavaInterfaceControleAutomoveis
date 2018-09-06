@@ -110,6 +110,7 @@ public class ControleAutomoveis extends javax.swing.JFrame {
 
         jPCategoria.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Categoria", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
+        bgCategoria.add(rbPasseio);
         rbPasseio.setText("Passeio");
         rbPasseio.setActionCommand("Passeio");
         rbPasseio.addActionListener(new java.awt.event.ActionListener() {
@@ -248,6 +249,11 @@ public class ControleAutomoveis extends javax.swing.JFrame {
                 tfAliquotaActionPerformed(evt);
             }
         });
+        tfAliquota.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                tfAliquotaKeyReleased(evt);
+            }
+        });
 
         btCalcularValorTotal.setText("Calcular Valor Total");
         btCalcularValorTotal.addActionListener(new java.awt.event.ActionListener() {
@@ -257,6 +263,7 @@ public class ControleAutomoveis extends javax.swing.JFrame {
         });
 
         btLimpar.setText("Limpar");
+        btLimpar.setEnabled(false);
         btLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btLimparActionPerformed(evt);
@@ -450,6 +457,12 @@ public class ControleAutomoveis extends javax.swing.JFrame {
         
         btAdicionar.setEnabled(true);
     }//GEN-LAST:event_rbCargaActionPerformed
+
+    private void tfAliquotaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfAliquotaKeyReleased
+        // TODO add your handling code here:
+        
+       
+    }//GEN-LAST:event_tfAliquotaKeyReleased
 
     /**
      * @param args the command line arguments
